@@ -28,6 +28,7 @@ mainEl[0].classList.add('flex-ctr');
 
 // Select and cache the <nav id="top-menu"> element in a variable named topMenuEl.
 const topMenuEl = document.querySelector("#top-menu");
+console.log(topMenuEl);
 
 // Set the height of the topMenuEl element to be 100%.
 topMenuEl.style.height = "100%";
@@ -37,3 +38,27 @@ topMenuEl.style.backgroundColor = 'var(--top-menu-bg)';
 
 // Add a class of flex-around to topMenuEl.
 topMenuEl.classList.add('flex-around');
+
+//3
+// Iterate over the entire menuLinks array and for each "link" object:
+
+    menuLinks.forEach((link)=>{
+
+    // Create an <a> element.
+    let newLink = document.createElement('a');
+
+    // On the new element, add an href attribute with 
+    // its value set to the href property of the "link" object.
+    newLink.setAttribute('href', link.href)
+
+    // Set the new element's content to the value of the 
+    // text property of the "link" object.
+    newLink.textContent = link.text
+    topMenuEl.appendChild(newLink)
+
+})
+
+
+// Set the new element's content to the value of the text property of the "link" object.
+
+// Append the new element to the topMenuEl element.
