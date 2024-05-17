@@ -61,4 +61,17 @@ topMenuEl.classList.add('flex-around');
 
 // Set the new element's content to the value of the text property of the "link" object.
 
+
 // Append the new element to the topMenuEl element.
+
+
+//Select and cache the <nav id="sub-menu"> element in a variable named subMenuEl.
+
+const subMenuEl = document.getElementById("sub-menu");
+
+//Set the height subMenuEl element to be "100%".
+subMenuEl.style.height = "100%";
+
+// Set the background color of subMenuEl to the value stored in the --sub-menu-bg CSS custom property.
+
+subMenuEl.style.backgroundColor =  "--sub-menu-bg";
